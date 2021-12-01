@@ -96,19 +96,19 @@ button:hover {
     width: 20%;
 }
 
-#pesq {
-    border-style: solid;
-    border-radius: 10px;
-    width: 80%;
-    transition: 0.2s all;
-}
-
-#pesq:hover {
-    background-color: lightgray;
-    border: 0.15rem solid;
-    border-color: #9a8c98;
-}
-
 .w3-bar .w3-button {
     padding: 16px;
+}
+
+#sign_up {
+    margin-left: 40%;
+    margin-top: 8%;
+    width: 50%;
+    border: 1px solid #ccc;
+}
+
+#image {
+    position: absolute;
+    top: 20%;
+    left: 5%;
 }
