@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
   <link rel="stylesheet" href="searchStyle.css" />
   <link rel="stylesheet" href="login_styles.css">
+  <link rel="stylesheet" href="my_styles.css">
   <style>
     body,
     h1,
@@ -178,9 +179,18 @@
         <img src="Images/logo.jpeg" alt="Logo">
       </div>
       <div class="w3-right w3-display-container display-concert">
-        <img class="mySlides" src="Images/logo.jpeg">
-        <img class="mySlides" src="Images/logo.jpeg">
-        <img class="mySlides" src="Images/logo.jpeg">
+        <div class="mySlides">
+          <img class="image-slides" src="Images/logo.jpeg">
+          <span>Ingresso Jogo Futebol <br> Porto (22/12/2021) <br> <br> Preço: 45€</span>
+        </div>
+        <div class="mySlides">
+          <img class="image-slides" src="Images/logo.jpeg">
+          <span>Concerto Casa da Música <br> Porto (23/12/2021) <br> Jorge Palma <br> Preço: 15€</span>
+        </div>
+        <div class="mySlides">
+          <img class="image-slides" src="Images/logo.jpeg">
+          <span>Super Bock Arena <br> (22/12/2021) <br> Jump Around <br> Preço: 30€</span>
+        </div>
         <div class="w3-center w3-display-bottommiddle " style="width:100%">
           <div class="w3-left" onclick="plusDivs(-1)">&#10094;</div>
           <div class="w3-right" onclick="plusDivs(1)">&#10095;</div>
@@ -193,9 +203,18 @@
 
     <header class="bgimg-1 w3-display-container w3-grayscale-min w3-hide-large" id="home1">
       <div class="w3-right w3-display-container display-concert1">
-        <img class="mySlides1" src="Images/logo.jpeg">
-        <img class="mySlides1" src="Images/logo.jpeg">
-        <img class="mySlides1" src="Images/logo.jpeg">
+        <div class="mySlides1">
+          <img class="image-slides1" src="Images/logo.jpeg">
+          <span>Ingresso Jogo Futebol <br> Porto (22/12/2021) <br> <br> Preço: 45€</span>
+        </div>
+        <div class="mySlides1">
+          <img class="image-slides1" src="Images/logo.jpeg">
+          <span>Concerto Casa da Música <br> Porto (23/12/2021) <br> Jorge Palma <br> Preço: 15€</span>
+        </div>
+        <div class="mySlides1">
+          <img class="image-slides1" src="Images/logo.jpeg">
+          <span>Super Bock Arena <br> (22/12/2021) <br> Jump Around <br> Preço: 30€</span>
+        </div>
         <div class="w3-center w3-display-bottommiddle " style="width:100%">
           <div class="w3-left" onclick="plusDivs1(-1)">&#10094;</div>
           <div class="w3-right" onclick="plusDivs1(1)">&#10095;</div>
@@ -246,34 +265,13 @@
       </div>
     </div>
 
-    <!-- Promo Section - "We know design" -->
-    <div class="w3-container w3-light-grey" style="padding: 128px 16px">
-      <div class="w3-row-padding">
-        <div class="w3-col m6">
-          <h3>We know design.</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod<br />tempor incididunt ut labore et dolore.
-          </p>
-          <p>
-            <a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Works</a>
-          </p>
-        </div>
-        <div class="w3-col m6">
-          <img class="w3-image w3-round-large" src="/w3images/phone_buildings.jpg" alt="Buildings" width="700"
-            height="394" />
-        </div>
-      </div>
-    </div>
-
     <!-- Team Section -->
     <div class="w3-container" style="padding: 128px 16px" id="team">
-      <h3 class="w3-center">THE TEAM</h3>
-      <p class="w3-center w3-large">The ones who runs this company</p>
+      <h3 class="w3-center">A equipa</h3>
+      <p class="w3-center w3-large">Quem gere a empresa</p>
       <div class="w3-row-padding w3-grayscale" style="margin-top: 64px">
         <div class="w3-col l3 m6 w3-margin-bottom">
           <div class="w3-card">
-            <img src="/w3images/team2.jpg" alt="John" style="width: 100%" />
             <div class="w3-container">
               <h3>John Doe</h3>
               <p class="w3-opacity">CEO & Founder</p>
@@ -291,7 +289,6 @@
         </div>
         <div class="w3-col l3 m6 w3-margin-bottom">
           <div class="w3-card">
-            <img src="/w3images/team1.jpg" alt="Jane" style="width: 100%" />
             <div class="w3-container">
               <h3>Anja Doe</h3>
               <p class="w3-opacity">Art Director</p>
@@ -309,7 +306,6 @@
         </div>
         <div class="w3-col l3 m6 w3-margin-bottom">
           <div class="w3-card">
-            <img src="/w3images/team3.jpg" alt="Mike" style="width: 100%" />
             <div class="w3-container">
               <h3>Mike Ross</h3>
               <p class="w3-opacity">Web Designer</p>
@@ -327,7 +323,6 @@
         </div>
         <div class="w3-col l3 m6 w3-margin-bottom">
           <div class="w3-card">
-            <img src="/w3images/team4.jpg" alt="Dan" style="width: 100%" />
             <div class="w3-container">
               <h3>Dan Star</h3>
               <p class="w3-opacity">Designer</p>
@@ -393,22 +388,18 @@
     <!-- Contact Section -->
     <div class="w3-container w3-light-grey" style="padding: 128px 16px" id="contact">
       <h3 class="w3-center">CONTACT</h3>
-      <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+      <p class="w3-center w3-large">Para qualquer dúvida nãi hesite em contactar-nos:</p>
       <div style="margin-top: 48px">
         <p>
           <i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>
-          Chicago, US
-        </p>
-        <p>
-          <i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone:
-          +00 151515
+          Porto, Portugal
         </p>
         <p>
           <i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i>
-          Email: mail@mail.com
+          Email: noemptyseatspt@gmail.com
         </p>
         <br />
-        <form action="/action_page.php" target="_blank">
+        <div target="_blank">
           <p>
             <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name" />
           </p>
@@ -426,7 +417,7 @@
               <i class="fa fa-paper-plane"></i> SEND MESSAGE
             </button>
           </p>
-        </form>
+        </div>
         <!-- Image of location/map -->
         <img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width: 100%; margin-top: 48px" />
       </div>
@@ -435,14 +426,6 @@
     <!-- Footer -->
     <footer class="w3-center w3-black w3-padding-64">
       <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-      <div class="w3-xlarge w3-section">
-        <i class="fa fa-facebook-official w3-hover-opacity"></i>
-        <i class="fa fa-instagram w3-hover-opacity"></i>
-        <i class="fa fa-snapchat w3-hover-opacity"></i>
-        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-        <i class="fa fa-twitter w3-hover-opacity"></i>
-        <i class="fa fa-linkedin w3-hover-opacity"></i>
-      </div>
     </footer>
 
     <script>

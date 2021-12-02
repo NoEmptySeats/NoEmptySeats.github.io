@@ -107,3 +107,31 @@ button:hover {
     top: 28%;
     left: 8%;
 }
+
+.image-slides {
+    width: 50%;
+}
+
+.mySlides>span,
+.mySlides1>span {
+    position: relative;
+    float: right;
+    margin-right: 10%;
+    margin-top: 15%;
+    font-size: medium;
+    font-weight: bold;
+    border: 1px solid #343a40;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.image-slides1 {
+    margin-left: 20%;
+    width: 60%;
+}
+
+.mySlides1>span {
+    margin-bottom: 10%;
+    margin-right: auto;
+    margin-left: auto;
+}

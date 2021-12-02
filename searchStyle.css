@@ -2013,8 +2013,10 @@ a {
 }
 
 .display-concert {
-	margin: 12% 16% 0 0;
+	margin: 16% 16% 0 0;
 	width: 40%;
+	background-color: #adb5bd;
+	border-radius: 50px;
 }
 
 .display-concert1 {
