@@ -2003,3 +2003,24 @@ a {
 .w3-hover-border-pale-blue:hover {
 	border-color: #e7ffff !important
 }
+
+.display-concert {
+	margin: 12% 16% 0 0;
+	width: 40%;
+}
+
+.display-concert1 {
+	margin: 40% 10% 0 0;
+	width: 80%;
+}
+
+.mySlides,
+.mySlides1 {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.mySlides1 {
+	width: 80%;
+}

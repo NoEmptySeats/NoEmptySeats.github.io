@@ -4,11 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
-  <link rel="stylesheet" href="searchStyle.css" <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Raleway" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="searchStyle.css" />
   <style>
     body,
     h1,
@@ -24,6 +25,22 @@
     html {
       height: 100%;
       line-height: 1.8;
+    }
+
+    .mySlides {
+      display: none
+    }
+
+    .w3-left,
+    .w3-right,
+    .w3-badge {
+      cursor: pointer
+    }
+
+    .w3-badge {
+      height: 13px;
+      width: 13px;
+      padding: 0
     }
 
     /* Full height image header */
@@ -42,6 +59,15 @@
       display: inline-block;
       margin-left: 33%;
       width: 20%;
+    }
+
+    #botao_pesq_small {
+      width: 25%;
+    }
+
+    #botao_pesq,
+    #pesq {
+      margin-top: 2%;
     }
 
     #pesq {
@@ -66,10 +92,10 @@
     <!-- Navbar (sit on top) -->
     <div class="w3-top">
       <div class="w3-bar w3-white w3-card" id="myNavbar">
-        <a href=""><img id="imagem" src="Images/logo.jpeg" alt="logo" /></a>
-        <form class="form-inline dar_input" action="#">
-          <input type="email" class="form-control" placeholder="Pesquisar" id="pesq" />
-          <button class="form-control" href="">
+        <a href="" class="w3-bar-item w3-button"><b>HOME</b></a>
+        <form class="form-inline dar_input w3-bar-item w3-hide-small" action="#">
+          <input type="email" class="form-control " placeholder="Pesquisar" id="pesq" />
+          <button class="form-control" id="botao_pesq" href="">
             <i class="fa fa-search"></i>
           </button>
         </form>
@@ -108,27 +134,45 @@
       <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
       <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
       <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+      <form class="form-inline w3-bar-item" action="#">
+        <input type="email" class="form-control" placeholder="Pesquisar" id="pesq" />
+        <button class="form-control" id="botao_pesq_small" href="">
+          <i class="fa fa-search"></i>
+        </button>
+      </form>
     </nav>
 
     <!-- Header with full-height image-->
-    <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-      <div class="w3-display-middle w3-text-white" style="padding: 48px">
-        <span class="w3-jumbo w3-hide-small">Start something that matters</span><br />
-        <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br />
-        <span class="w3-large">Stop wasting valuable time with projects that just isn't you.</span>
-        <p>
-          <a href="#about" class="
-              w3-button
-              w3-white
-              w3-padding-large
-              w3-large
-              w3-margin-top
-              w3-opacity
-              w3-hover-opacity-off
-            ">Learn more and start today</a>
-        </p>
+    <header class="bgimg-1 w3-display-container w3-grayscale-min w3-hide-small w3-hide-medium" id="home">
+      <div class="w3-display-left w3-text-white " style="padding: 48px">
+        <img src="Images/logo.jpeg" alt="Logo">
       </div>
+      <div class="w3-right w3-display-container display-concert">
+        <img class="mySlides" src="Images/logo.jpeg">
+        <img class="mySlides" src="Images/logo.jpeg">
+        <img class="mySlides" src="Images/logo.jpeg">
+        <div class="w3-center w3-display-bottommiddle " style="width:100%">
+          <div class="w3-left" onclick="plusDivs(-1)">&#10094;</div>
+          <div class="w3-right" onclick="plusDivs(1)">&#10095;</div>
+          <span class="w3-badge demo w3-border" onclick="currentDiv(1)"></span>
+          <span class="w3-badge demo w3-border" onclick="currentDiv(2)"></span>
+          <span class="w3-badge demo w3-border" onclick="currentDiv(3)"></span>
+        </div>
       </div>
+    </header>
+
+    <header class="bgimg-1 w3-display-container w3-grayscale-min w3-hide-large" id="home1">
+      <div class="w3-right w3-display-container display-concert1">
+        <img class="mySlides1" src="Images/logo.jpeg">
+        <img class="mySlides1" src="Images/logo.jpeg">
+        <img class="mySlides1" src="Images/logo.jpeg">
+        <div class="w3-center w3-display-bottommiddle " style="width:100%">
+          <div class="w3-left" onclick="plusDivs1(-1)">&#10094;</div>
+          <div class="w3-right" onclick="plusDivs1(1)">&#10095;</div>
+          <span class="w3-badge demo1 w3-border" onclick="currentDiv1(1)"></span>
+          <span class="w3-badge demo1 w3-border" onclick="currentDiv1(2)"></span>
+          <span class="w3-badge demo1 w3-border" onclick="currentDiv1(3)"></span>
+        </div>
       </div>
     </header>
 
@@ -394,6 +438,70 @@
       // Close the sidebar with the close button
       function w3_close() {
         mySidebar.style.display = "none";
+      }
+
+      var slideIndex = 1;
+      showDivs(slideIndex);
+
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+
+      function currentDiv(n) {
+        showDivs(slideIndex = n);
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > x.length) {
+          slideIndex = 1
+        }
+        if (n < 1) {
+          slideIndex = x.length
+        }
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        for (i = 0; i <
+          dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" w3-white", "");
+        }
+        x[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " w3-white";
+      }
+
+      var slideIndex1 = 1;
+      showDivs1(slideIndex1);
+
+      function plusDivs1(n) {
+        showDivs1(slideIndex1 += n);
+      }
+
+      function currentDiv1(n) {
+        showDivs1(slideIndex1 = n);
+      }
+
+      function showDivs1(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides1");
+        var dots = document.getElementsByClassName("demo1");
+        if (n > x.length) {
+          slideIndex1 = 1
+        }
+        if (n < 1) {
+          slideIndex1 = x.length
+        }
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        for (i = 0; i <
+          dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" w3-white", "");
+        }
+        x[slideIndex1 - 1].style.display = "block";
+        dots[slideIndex1 - 1].className += " w3-white";
       }
     </script>
     <!-- jQuery library -->
