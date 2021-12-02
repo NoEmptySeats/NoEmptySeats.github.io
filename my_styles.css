@@ -85,11 +85,6 @@ button:hover {
     }
 }
 
-#imagem {
-    width: 3%;
-    margin-left: 1%;
-}
-
 .dar_input {
     display: inline-block;
     margin-left: 33%;
@@ -109,6 +104,6 @@ button:hover {
 
 #image {
     position: absolute;
-    top: 20%;
-    left: 5%;
+    top: 28%;
+    left: 8%;
 }
