@@ -135,3 +135,9 @@ button:hover {
     margin-right: auto;
     margin-left: auto;
 }
+
+.display-concert>p {
+    font-size: 20px;
+    width: 100%;
+    margin-left: 44%;
+}
